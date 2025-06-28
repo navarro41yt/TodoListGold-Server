@@ -1,0 +1,49 @@
+{
+    "name": "navarro41yt/todolistgold",
+    "description": "Server API para Tasks",
+    "type": "project",
+    "license": "MIT",
+    "config": {
+        "use-parent-dir": true
+    },
+    "require": {
+        "doctrine/orm": "^3.3",
+        "doctrine/dbal": "^4.2",
+        "symfony/cache": "^7.1",
+
+        "tecnickcom/tcpdf": "^6.7",
+        "phpmailer/phpmailer": "^6.9",
+        "phpoffice/phpspreadsheet": "^3.3",
+
+        "gasparesganga/php-shapefile": "^3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "TodoListGold\\": ""
+        },
+        "classmap": [
+            "api/",
+            "model/",
+            "views/",
+            "utils/"
+        ],
+        "files": [
+            "utils/constants.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Antonio Navarro",
+            "email": "navarro41yt@gmail.com",
+            "role": "Lead Developer"
+        },
+        {
+            "name": "Alejandro Rodríguez",
+            "email": "unknown@mail.com",
+            "role": "Web Developer"
+        }
+    ]
+}
