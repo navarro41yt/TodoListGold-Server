@@ -1,0 +1,14 @@
+openapi: 3.1.1
+info:
+  title: TodoListGold API
+  version: v1
+paths:
+  /api/health:
+    get:
+      tags:
+        - HealthController
+      summary: Estado General de la API
+      description: Devuelve la Versión junto a la Fecha y Hora actual del servidor.
+      responses:
+        '200':
+          description: Respuesta satisfactoria con la versión y fecha actual.
