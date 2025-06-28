@@ -32,15 +32,15 @@ class Select extends ComponentBase
         $this->idUl = $idUl;
         $this->idDiv = $idDiv;
         $this->idName = $name;
-        $requiered = $required ? 'required' : '';
+        $required = $required ? 'required' : '';
         $this->html = <<<HTML
             <input type="hidden" name="$name" id="$idHidden">
             <div class="singleselect" hidden_input="$name" id="$idDiv">
-                <input type="text" class="selected-option" placeholder="$placeholder" autocomplete="off" $requiered id="$idInput">
+                <input type="text" class="selected-option" placeholder="$placeholder" autocomplete="off" $required id="$idInput">
                 <ul class="dropdown hidden" id="$idUl">
         HTML;
 
-        if (!$requiered) {
+        if (!$required) {
             $this->html .= "<li data-value=\"\" class=\"placeholder\">$placeholder</li>";
         }
 

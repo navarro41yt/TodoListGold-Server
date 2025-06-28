@@ -12,11 +12,11 @@ class SingleSelect extends StaticComponentBase
         parent::__construct();
         $this->options = $options;
 
-        $requiered = $required ? 'required' : '';
+        $required = $required ? 'required' : '';
         $this->html = <<<HTML
             <input type="hidden" name="$idName" id="$idName">
             <div class="singleselect" hidden_input="$idName">
-                <input type="text" class="selected-option" placeholder="$placeholder" autocomplete="off" $requiered>
+                <input type="text" class="selected-option" placeholder="$placeholder" autocomplete="off" $required>
                 <ul class="dropdown hidden">
         HTML;
 
